@@ -8,5 +8,20 @@ def pos_add(a, b):
 def foo(a):
     return (a // -11, a % -11)
 
+#Напишите функцию num_sum(a), принимающую любое значение.
+#Если это целое число, то возвратить сумму его чисел.
+#В противном случае возвращается фраза «Это не целое число».
+
+def num_sum(a):
+    if isinstance(a, int):
+        a_to_str = str(abs(a))
+        sum = 0
+        for i in a_to_str:
+            sum += int(i)
+        return(sum)
+    return "Это не целое число"
+
+
 print(pos_add(1, 3))
 print(foo(22))
+print(num_sum(-146))
